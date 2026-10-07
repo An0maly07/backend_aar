@@ -1,0 +1,22 @@
+# Core
+Flask>=3.0,<4
+Flask-SQLAlchemy>=3.1,<4
+Flask-Migrate>=4.0,<5
+Flask-Login>=0.6.3,<1
+Flask-Limiter>=3.5,<4
+Flask-Cors>=4.0,<6
+marshmallow>=3.20,<4
+python-dotenv>=1.0,<2
+
+# AI risk detection
+scikit-learn>=1.4,<2
+numpy>=1.26
+joblib>=1.3
+
+# Tests
+pytest>=8,<9
+
+# Optional - uncomment when needed
+# PyMySQL>=1.1      # DATABASE_URL=mysql+pymysql://...
+# twilio>=9.0       # ALERT_CHANNELS=sms
+# waitress>=3.0     # production server on Windows

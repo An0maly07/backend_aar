@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Live Location</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="{{ url_for('static', filename='track.css') }}">
+</head>
+<body>
+  <main id="app" data-endpoint="{{ url_for('tracking.track_data', token=token) }}">
+    <header>
+      <span id="badge" class="badge">Loading…</span>
+      <h1 id="title">Live location</h1>
+      <p id="subtitle" class="muted"></p>
+    </header>
+    <div id="map" role="region" aria-label="Map showing the latest location"></div>
+    <section class="actions">
+      <a id="gmaps" class="button" target="_blank" rel="noopener noreferrer" hidden>Open in Google Maps</a>
+      <a id="call" class="button secondary" hidden></a>
+    </section>
+    <p id="updated" class="muted"></p>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="{{ url_for('static', filename='track.js') }}"></script>
+</body>
+</html>
